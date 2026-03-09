@@ -492,6 +492,25 @@
     .font-showcase { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .pains-grid { grid-template-columns: 1fr; }
+
+    /* ── METODOLOGÍA mobile ── */
+    .metodologia-section { padding: 72px 24px !important; }
+    .metodologia-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+    /* ── QUIÉNES SOMOS mobile ── */
+    .quienes-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 72px 24px !important; }
+
+    /* ── FOOTER mobile ── */
+    .footer-inner { padding: 40px 24px 24px !important; }
+    .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 8px !important; }
+
+    /* ── POLÍTICA DE PRIVACIDAD mobile ── */
+    .privacidad-wrapper { padding: 20px 24px !important; }
+
+    /* ── CTA BOX mobile ── */
+    .cta-box { padding: 28px 20px !important; }
+    .form-grid-2 { grid-template-columns: 1fr !important; }
   }
 
   /* ── ANIMATIONS ── */
@@ -655,14 +674,14 @@
 
 
 <!-- METODOLOGÍA -->
-<section style="padding: 100px 48px; background: var(--charcoal);">
+<section class="metodologia-section" style="padding: 100px 48px; background: var(--charcoal);">
   <div style="max-width: 900px; margin: 0 auto;">
     <div class="section-tag" style="color: var(--sage-light);">Metodología Mo-Flow</div>
     <div class="section-title" style="color: white; max-width: 560px;">Investigamos desde adentro, <em style="color: var(--sage-light); font-style:italic;">no desde afuera</em></div>
     <p class="section-sub" style="color: rgba(255,255,255,0.55); max-width: 600px; margin-bottom: 64px;">Antes de automatizar cualquier cosa, Mo-Flow entra al proceso comercial de tu empresa, lo observa, lo mapea y entiende cómo fluye realmente — no cómo debería fluir en teoría.</p>
 
     <!-- 4 pilares -->
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 64px;">
+    <div class="metodologia-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 64px;">
 
       <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(123,175,142,0.2); border-radius: 20px; padding: 32px;">
         <div style="font-size: 1.8rem; margin-bottom: 16px;">🔍</div>
@@ -715,7 +734,7 @@
     <!-- FORMULARIO -->
     <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
         <div>
           <label style="display:block; font-size:0.72rem; font-weight:600; color:var(--mid); margin-bottom:5px; text-align:left;">Nombre completo *</label>
           <input type="text" id="f-nombre" placeholder="Tu nombre" style="width:100%; padding:10px 14px; border:1.5px solid #E0DDD6; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.85rem; color:var(--charcoal); background:var(--cream); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#7BAF8E'" onblur="this.style.borderColor='#E0DDD6'">
@@ -829,7 +848,7 @@ function enviarFormulario() {
 
 <!-- QUIÉNES SOMOS -->
 <section id="quienes-somos" style="padding: 100px 48px; background: white;">
-  <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+  <div class="quienes-grid" style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
     <div>
       <div class="section-tag">Quiénes somos</div>
       <div class="section-title">Mo-Flow <em>Consultora</em></div>
@@ -869,9 +888,9 @@ function enviarFormulario() {
 </section>
 
 <!-- FOOTER -->
-<footer style="background: var(--charcoal); padding: 48px 48px 24px;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px;">
+<footer style="background: var(--charcoal);">
+  <div class="footer-inner" style="max-width: 900px; margin: 0 auto; padding: 48px 48px 24px;">
+    <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px;">
 
       <!-- Col 1 -->
       <div>
@@ -902,7 +921,7 @@ function enviarFormulario() {
     </div>
 
     <!-- Divider -->
-    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+    <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
       <div style="font-size: 0.68rem; color: rgba(255,255,255,0.25);">© 2026 Mo-Flow Consultora. Todos los derechos reservados.</div>
       <div style="font-size: 0.68rem; color: rgba(255,255,255,0.25);">Región del Maule, Chile · Atención 100% remota</div>
     </div>
@@ -910,10 +929,10 @@ function enviarFormulario() {
 </footer>
 
 <!-- POLÍTICA DE PRIVACIDAD -->
-<div id="privacidad" style="background: #EDEAE3; padding: 20px 48px; border-top: 1px solid #D8D4CC;">
+<div id="privacidad" class="privacidad-wrapper" style="background: #EDEAE3; padding: 20px 48px; border-top: 1px solid #D8D4CC;">
   <div style="max-width: 860px; margin: 0 auto; font-family: 'DM Sans', sans-serif; font-size: 0.67rem; color: #888; line-height: 1.6;">
     <span style="font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Política de Privacidad — Mo-Flow Consultora · Última actualización: Marzo 2026.</span>
-    <strong style="color: #666;">1. Responsable.</strong> Mo-Flow Consultora, Región del Maule, Chile. Contacto: mom.portafolio@gmail.com · +56 9 7785 3861.
+    <strong style="color: #666;">1. Responsable.</strong> Mo-Flow Consultora, Región del Maule, Chile. Contacto: mom.portafolio@gmail.com.
     <strong style="color: #666;">2. Datos recopilados.</strong> Nombre, correo, teléfono y consulta, proporcionados voluntariamente. No se recopilan datos sensibles ni de pago.
     <strong style="color: #666;">3. Finalidad.</strong> Responder consultas, coordinar reuniones y entregar información sobre los servicios solicitados. Sin envíos masivos ni publicidad de terceros.
     <strong style="color: #666;">4. Cookies.</strong> Se usan cookies técnicas y analítica web (Google Analytics). El usuario puede rechazarlas desde su navegador.
@@ -927,9 +946,4 @@ function enviarFormulario() {
 <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--charcoal); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; z-index: 9999; box-shadow: 0 -4px 24px rgba(0,0,0,0.2); flex-wrap: wrap;">
   <p style="font-size: 0.78rem; color: rgba(255,255,255,0.7); line-height: 1.5; flex: 1; min-width: 260px;">🍪 Este sitio usa cookies para mejorar tu experiencia y analizar el tráfico. Al continuar navegando, aceptas su uso según nuestra <a href="#privacidad" style="color: var(--sage-light); text-decoration: underline;">Política de privacidad</a>.</p>
   <div style="display: flex; gap: 12px; flex-shrink: 0; align-items: center;">
-    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: var(--sage); color: white; border: none; padding: 8px 20px; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; cursor: pointer;">Aceptar</button>
-    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="background: transparent; color: rgba(255,255,255,0.5); border: none; font-size: 1.4rem; line-height: 1; cursor: pointer; padding: 4px 8px;" aria-label="Cerrar">×</button>
-  </div>
-</div>
-
-</body></html>
+    <button onclick="document.getElementById
